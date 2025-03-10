@@ -1,0 +1,269 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.0060, 40.7128]
+      },
+      "properties": {
+        "name": "New York City",
+        "population": 8537673,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-118.2437, 34.0522]
+      },
+      "properties": {
+        "name": "Los Angeles",
+        "population": 3990456,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.6298, 41.8781]
+      },
+      "properties": {
+        "name": "Chicago",
+        "population": 2720594,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.1631, 39.9523]
+      },
+      "properties": {
+        "name": "Philadelphia",
+        "population": 1493479,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-96.7969, 32.7763]
+      },
+      "properties": {
+        "name": "Dallas",
+        "population": 1347776,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.1918, 25.7617]
+      },
+      "properties": {
+        "name": "Miami",
+        "population": 463347,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0842, 37.3853]
+      },
+      "properties": {
+        "name": "San Jose",
+        "population": 1037113,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.0543, 42.3584]
+      },
+      "properties": {
+        "name": "Boston",
+        "population": 694583,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-93.2650, 44.9778]
+      },
+      "properties": {
+        "name": "Minneapolis",
+        "population": 428296,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.0738, 33.4484]
+      },
+      "properties": {
+        "name": "Phoenix",
+        "population": 1732125,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.3832, 43.6532]
+      },
+      "properties": {
+        "name": "Toronto",
+        "population": 2731521,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-103.3548, 19.4326]
+      },
+      "properties": {
+        "name": "Guadalajara",
+        "population": 1870031,
+        "country": "Mexico"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.1332, 19.4326]
+      },
+      "properties": {
+        "name": "Mexico City",
+        "population": 2120000,
+        "country": "Mexico"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.6972, 45.4215]
+      },
+      "properties": {
+        "name": "Ottawa",
+        "population": 983833,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.4163, 43.6532]
+      },
+      "properties": {
+        "name": "Mississauga",
+        "population": 721599,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.5673, 45.5017]
+      },
+      "properties": {
+        "name": "Montreal",
+        "population": 1704694,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-100.3161, 25.6732]
+      },
+      "properties": {
+        "name": "Monterrey",
+        "population": 1131110,
+        "country": "Mexico"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-123.1207, 49.2827]
+      },
+      "properties": {
+        "name": "Vancouver",
+        "population": 648483,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-114.0708, 51.0486]
+      },
+      "properties": {
+        "name": "Calgary",
+        "population": 1323823,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-113.4909, 53.5444]
+      },
+      "properties": {
+        "name": "Edmonton",
+        "population": 812201,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-98.1943, 19.0464]
+      },
+      "properties": {
+        "name": "Puebla",
+        "population": 1540836,
+        "country": "Mexico"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-116.9707, 32.5147]
+      },
+      "properties": {
+        "name": "Tijuana",
+        "population": 1931650,
+        "country": "Mexico"
+      }
+    }
+  ]
+}

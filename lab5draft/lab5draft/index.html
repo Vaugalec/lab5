@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Interactive Choropleth Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        .map-overlay {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 3px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        #legend {
+            bottom: 30px;
+            left: 10px;
+        }
+        #features {
+            left: 10px;
+        }
+        .legend-key {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div class="map-overlay" id="features">
+        <h2>Most Populous Cities in North America</h2>
+        <div id="pd"><p>Hover over a City!</p></div>
+    </div>
+    <div class="map-overlay" id="legend"></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmF1Z2FsZWMiLCJhIjoiY204M2h3Ymx6MDNtcDJwcGd5Mm9qcng5bSJ9.y2O6AnD_1R3ZLzOIoSwtpQ';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-98.5795, 39.8283],
+            zoom: 3
+        });
+
+        map.on('load', function () {
+            map.addSource('north-america-cities', {
+                'type': 'geojson',
+                'data': {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.0060, 40.7128]
+      },
+      "properties": {
+        "name": "New York City",
+        "population": 8537673,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-118.2437, 34.0522]
+      },
+      "properties": {
+        "name": "Los Angeles",
+        "population": 3990456,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-87.6298, 41.8781]
+      },
+      "properties": {
+        "name": "Chicago",
+        "population": 2720594,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.1631, 39.9523]
+      },
+      "properties": {
+        "name": "Philadelphia",
+        "population": 1493479,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-96.7969, 32.7763]
+      },
+      "properties": {
+        "name": "Dallas",
+        "population": 1347776,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-80.1918, 25.7617]
+      },
+      "properties": {
+        "name": "Miami",
+        "population": 463347,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.0842, 37.3853]
+      },
+      "properties": {
+        "name": "San Jose",
+        "population": 1037113,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-71.0543, 42.3584]
+      },
+      "properties": {
+        "name": "Boston",
+        "population": 694583,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-93.2650, 44.9778]
+      },
+      "properties": {
+        "name": "Minneapolis",
+        "population": 428296,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.0738, 33.4484]
+      },
+      "properties": {
+        "name": "Phoenix",
+        "population": 1732125,
+        "country": "USA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.3832, 43.6532]
+      },
+      "properties": {
+        "name": "Toronto",
+        "population": 2731521,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-103.3548, 19.4326]
+      },
+      "properties": {
+        "name": "Guadalajara",
+        "population": 1870031,
+        "country": "Mexico"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-99.1332, 19.4326]
+      },
+      "properties": {
+        "name": "Mexico City",
+        "population": 2120000,
+        "country": "Mexico"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.6972, 45.4215]
+      },
+      "properties": {
+        "name": "Ottawa",
+        "population": 983833,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-79.4163, 43.6532]
+      },
+      "properties": {
+        "name": "Mississauga",
+        "population": 721599,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.5673, 45.5017]
+      },
+      "properties": {
+        "name": "Montreal",
+        "population": 1704694,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-100.3161, 25.6732]
+      },
+      "properties": {
+        "name": "Monterrey",
+        "population": 1131110,
+        "country": "Mexico"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-123.1207, 49.2827]
+      },
+      "properties": {
+        "name": "Vancouver",
+        "population": 648483,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-114.0708, 51.0486]
+      },
+      "properties": {
+        "name": "Calgary",
+        "population": 1323823,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-113.4909, 53.5359]
+      },
+      "properties": {
+        "name": "Edmonton",
+        "population": 812201,
+        "country": "Canada"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-78.5242, -0.2295]
+      },
+      "properties": {
+        "name": "Quito",
+        "population": 2282171,
+        "country": "Ecuador"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-98.1947, 19.0433]
+      },
+      "properties": {
+        "name": "Puebla",
+        "population": 1540836,
+        "country": "Mexico"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.0176, 32.5042]
+      },
+      "properties": {
+        "name": "Tijuana",
+        "population": 1931650,
+        "country": "Mexico"
+      }
+    }
+  ]
+}
+});
+            map.addLayer({
+                'id': 'city-points',
+                'type': 'circle',
+                'source': 'north-america-cities',
+                'paint': {
+                    'circle-color': '#007bff',
+                    'circle-radius': 10
+                }
+            });
+
+            map.on('mousemove', 'city-points', function (e) {
+                var properties = e.features[0].properties;
+                document.getElementById('pd').innerHTML = '<h3>' + properties.name + '</h3><p>Population: ' + properties.population.toLocaleString() + ', ' + properties.country + '</p>';
+            });
+
+            map.on('mouseleave', 'city-points', function () {
+                document.getElementById('pd').innerHTML = '<p>Hover over a City!</p>';
+            });
+
+            var layers = [
+                '0-1M', '1M-3M', '3M-8M', '8M+'
+            ];
+            var colors = [
+                '#FFFFE0', '#FFA500', '#FF4500', '#8B0000'
+            ];
+
+            for (var i = 0; i < layers.length; i++) {
+                var layer = layers[i];
+                var color = colors[i];
+                var item = document.createElement('div');
+                var key = document.createElement('span');
+                key.className = 'legend-key';
+                key.style.backgroundColor = color;
+
+                var value = document.createElement('span');
+                value.innerHTML = layer;
+                item.appendChild(key);
+                item.appendChild(value);
+                document.getElementById('legend').appendChild(item);
+            }
+        });
+    </script>
+</body>
+</html>
+
