@@ -1,0 +1,59 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [-140.0000, 50.7000],
+            [-141.0000, 70.1000],
+            [-65.0000, 75.1000],
+            [-50.0000, 41.7000],
+            [-140.0000, 50.7000]
+          ]]
+      },
+      "properties": {
+        "name": "Canada",
+        "population": 37742154,
+        "total_area": 9984670
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [-105.0000, 14.5000],
+            [-119.0000, 32.7000],
+            [-86.5000, 25.7000],
+            [-86.5000, 18.5000],
+            [-105.0000, 14.5000]
+          ]]
+      },
+      "properties": {
+        "name": "Mexico",
+        "population": 127575529,
+        "total_area": 1964375
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [-124.0000, 32.396308],
+            [-125.0000, 49.384358],
+            [-65.932639, 47.384358],
+            [-78.932639, 24.396308],
+            [-124.0000, 32.396308]
+          ]]
+      },
+      "properties": {
+        "name": "United States",
+        "population": 331449281,
+        "total_area": 9833520
+      }
+    }
+  ]
+}
